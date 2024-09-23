@@ -1,5 +1,10 @@
 package com.example.algorithm.sort;
 
+/**
+ * 最优的时间复杂度为：O( n^2 ) ；有的说 O(n)
+ * 最差的时间复杂度为：O( n^2 )
+ * 平均的时间复杂度为：O( n^2 )
+ */
 public class BubbleSort {
     public static void bubbleSort(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
