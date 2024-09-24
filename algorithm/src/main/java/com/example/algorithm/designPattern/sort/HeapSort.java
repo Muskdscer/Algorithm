@@ -13,12 +13,12 @@ public class HeapSort {
     public static void heapSort(int[] arr)
     {
         //第一次建立大根堆，从后往前依次调整
-        for (int i = arr.length / 2 - 1; i >= 0 ; i--) {
+        for (int i = arr.length / 2 - 1; i >= 0 ; i--) {//广度遍历
             //从第一个非叶子结点从下至上，从右至左调整结构
-            HeapAdjust(arr, i, arr.length);
+            HeapAdjust(arr, i, arr.length);//深度往下调整
         }
         //调整堆结构+交换堆顶元素与末尾元素
-        for (int j = arr.length - 1; j > 0 ; j--) {
+        for (int j = arr.length - 1; j > 0 ; j--) {//深度逐渐减少调整
             swap(arr,0,j);//将堆顶元素与末尾元素进行交换
             HeapAdjust(arr,0,j);//重新对堆进行调整
         }
