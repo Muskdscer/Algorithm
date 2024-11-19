@@ -6,5 +6,7 @@ public class TreeNode {
     Character val;
     public TreeNode(Character val){
         this.val = val;
+        this.left = null;
+        this.right = null;
     }
 }
