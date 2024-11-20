@@ -25,6 +25,7 @@ public class AddStrings {
             int y = j >= 0 ? num2.charAt(j) - '0' : 0;
             int result = x + y + add;
             ans.append(result % 10);
+            //下一位计算使用 加上去
             add = result / 10;
             i--;
             j--;
