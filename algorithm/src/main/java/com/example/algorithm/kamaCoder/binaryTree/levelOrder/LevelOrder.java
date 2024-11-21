@@ -24,6 +24,8 @@ public class LevelOrder {
     static Map<Character, Integer> map = new HashMap<>();
     //层序遍历存放二叉树节点
     static List<List<TreeNode>> result = new ArrayList<>();
+    //从底向上层序遍历
+    static List<List<TreeNode>> reverseResult = new ArrayList<>();
     public static void main(String[] args) {
         Scanner sc =  new Scanner(System.in);
         while (sc.hasNextLine()) {
@@ -74,6 +76,12 @@ public class LevelOrder {
 //            }
 
         }
+
+        //求从底向上层序遍历的结果
+//        for (int i = result.size() - 1 ; i >= 0; i--) {
+//            reverseResult.add(result.get(i));
+//        }
+//        return reverseResult;
         return result;
     }
 
