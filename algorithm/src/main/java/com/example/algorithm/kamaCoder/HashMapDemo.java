@@ -20,6 +20,7 @@ public class HashMapDemo {
     }
 
     private final int CAPACITY = 16;
+    //hash桶位置
     Node[] nodes = new Node[CAPACITY];
 
     public void put(int key, int value) {
