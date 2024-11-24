@@ -17,11 +17,14 @@ public class HeapSort {
     private static void heapSortNew(int[] nums) {
         //第一次调整堆
         for (int i = nums.length / 2 - 1; i >= 0; i--) {
+            //在 i - nums.length - 1  之间调整 i--
             Adjust(nums, i, nums.length - 1);
         }
         //交换+调整
         for (int i = nums.length - 1; i > 0; i--) {
+            //0 i位置调换
             swapNew(nums, 0, i);
+            //在0-i之间调整 i--
             Adjust(nums, 0, i);
         }
     }
