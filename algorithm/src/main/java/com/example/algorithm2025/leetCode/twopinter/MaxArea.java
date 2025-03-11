@@ -1,4 +1,4 @@
-package com.example.algorithm2025.leetCode;
+package com.example.algorithm2025.leetCode.twopinter;
 
 public class MaxArea {
     public static void main(String[] args) {

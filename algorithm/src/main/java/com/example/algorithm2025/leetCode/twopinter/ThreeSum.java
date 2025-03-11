@@ -1,4 +1,4 @@
-package com.example.algorithm2025.leetCode;
+package com.example.algorithm2025.leetCode.twopinter;
 
 import java.util.ArrayList;
 import java.util.Arrays;

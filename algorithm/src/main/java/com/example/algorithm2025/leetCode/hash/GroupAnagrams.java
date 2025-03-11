@@ -1,4 +1,4 @@
-package com.example.algorithm2025.codeTop;
+package com.example.algorithm2025.leetCode.hash;
 
 import java.util.ArrayList;
 import java.util.HashMap;

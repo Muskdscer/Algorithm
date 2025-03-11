@@ -1,4 +1,4 @@
-package com.example.algorithm2025.leetCode;
+package com.example.algorithm2025.leetCode.hash;
 
 import java.util.HashMap;
 import java.util.Map;

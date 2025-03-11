@@ -1,4 +1,4 @@
-package com.example.algorithm2025.leetCode;
+package com.example.algorithm2025.leetCode.slidewindow;
 
 import java.util.Arrays;
 import java.util.HashSet;
