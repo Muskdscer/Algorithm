@@ -37,7 +37,7 @@ public class LRUCache {
             return -1;
         }
         //如果存在先通过哈希表定位，再移到头部
-        moveToHead(node);
-        return node.value;;
+//        moveToHead(node);
+        return node.value;
     }
 }
