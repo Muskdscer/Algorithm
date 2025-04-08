@@ -28,6 +28,7 @@ public class OrangesRotting {
                 int[] orange = queue.poll();
                 int r = orange[0];
                 int c = orange[1];
+
                 if (r-1 >= 0 && grid[r-1][c] == 1) {
                     grid[r-1][c] = 2;
                     count--;
