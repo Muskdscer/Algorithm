@@ -6,8 +6,8 @@ public class Flatten {
          if (root == null) {
              return;
          }
-         flatten(root.left);
          flatten(root.right);
+         flatten(root.left);
          root.right = pre;
          root.left = null;
          pre = root;
