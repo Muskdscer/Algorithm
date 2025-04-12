@@ -10,8 +10,8 @@ public class BuildTree1 {
             map.put(inorder[i], i);
         }
 
-        TreeNode root = BuildByPreAndIn(preorder, 0, preorder.length - 1, inorder, 0, inorder.length - 1);
-        return root;
+        //左闭右闭
+        return BuildByPreAndIn(preorder, 0, preorder.length - 1, inorder, 0, inorder.length - 1);
     }
 
     private TreeNode BuildByPreAndIn(int[] preorder, int preStart, int preEnd, int[] inorder, int inStart, int inEnd) {
@@ -19,9 +19,11 @@ public class BuildTree1 {
             return null;
         }
 
-        int rootIndex = map.get(inorder[inStart]);
-        TreeNode root = new TreeNode(val);
+        int rootIndex = map.get(preorder[preStart]);
+        TreeNode root = new TreeNode(preorder[preStart]);
+        int lenOfLeft = rootIndex - inStart;
+        root.left = BuildByPreAndIn(preorder, preStart + 1, preStart + lenOfLeft, inorder, inStart, inStart + lenOfLeft - 1);
+        root.right = BuildByPreAndIn(preorder, preStart + lenOfLeft + 1, preEnd, inorder, rootIndex + 1, inEnd);
+        return root;
     }
-
-
 }
