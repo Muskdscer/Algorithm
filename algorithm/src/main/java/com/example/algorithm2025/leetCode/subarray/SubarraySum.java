@@ -23,6 +23,4 @@ public class SubarraySum {
         }
         return count;
     }
-
-
 }
