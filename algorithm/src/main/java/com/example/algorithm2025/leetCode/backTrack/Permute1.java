@@ -13,7 +13,6 @@ public class Permute1 {
             return new ArrayList<>();
         }
         used = new boolean[nums.length];
-        int k = nums.length;
         permuteHelper(nums);
         return res;
     }
