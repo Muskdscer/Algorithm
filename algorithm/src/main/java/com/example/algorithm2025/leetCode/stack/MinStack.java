@@ -1,4 +1,4 @@
-package com.example.algorithm2025.leetCode.sort;
+package com.example.algorithm2025.leetCode.stack;
 
 import java.util.Deque;
 import java.util.LinkedList;
