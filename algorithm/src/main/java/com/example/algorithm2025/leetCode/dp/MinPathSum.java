@@ -13,10 +13,8 @@ public class MinPathSum {
                 } else {
                     grid[i][j] = Math.min(grid[i][j - 1], grid[i - 1][j]) + grid[i][j];
                 }
-
             }
         }
         return grid[grid.length - 1][grid[0].length - 1];
-
     }
 }
