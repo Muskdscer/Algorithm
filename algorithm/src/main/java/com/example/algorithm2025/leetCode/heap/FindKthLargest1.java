@@ -1,40 +1,37 @@
 package com.example.algorithm2025.leetCode.heap;
 
+//todo 正确版
 public class FindKthLargest1 {
     public int findKthLargest(int[] nums, int k) {
-        int heapSize = nums.length;
-        buildMaxHeap(nums, heapSize);
-        for (int i = nums.length - 1; i >= nums.length - k + 1; --i) {
+        for (int i = nums.length / 2 - 1; i >= 0; i--) {
+            HeapAdjust(nums, i, nums.length - 1);
+        }
+        for (int i = nums.length - 1; i > nums.length - k; i--) {
             swap(nums, 0, i);
-            --heapSize;
-            maxHeapify(nums, 0, heapSize);
+            HeapAdjust(nums, 0, i - 1);
         }
         return nums[0];
     }
 
-    public void buildMaxHeap(int[] a, int heapSize) {
-        for (int i = heapSize / 2 - 1; i >= 0; --i) {
-            maxHeapify(a, i, heapSize);
+    public void HeapAdjust(int[] arr, int start, int end) {
+        int temp = arr[start];
+        for(int i = 2 * start + 1; i <= end; i = i * 2 + 1) {
+            if(i < end && arr[i] < arr[i+1]) {
+                i++;
+            }
+            if(arr[i] > temp) {
+                arr[start] = arr[i];
+                start = i;
+            } else {
+                break;
+            }
         }
+        arr[start] = temp;
     }
 
-    public void maxHeapify(int[] a, int i, int heapSize) {
-        int l = i * 2 + 1, r = i * 2 + 2, largest = i;
-        if (l < heapSize && a[l] > a[largest]) {
-            largest = l;
-        }
-        if (r < heapSize && a[r] > a[largest]) {
-            largest = r;
-        }
-        if (largest != i) {
-            swap(a, i, largest);
-            maxHeapify(a, largest, heapSize);
-        }
+    public void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
     }
-    public void swap(int[] a, int i, int j) {
-        int temp = a[i];
-        a[i] = a[j];
-        a[j] = temp;
-    }
-
 }
