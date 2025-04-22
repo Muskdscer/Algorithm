@@ -1,8 +1,10 @@
-package com.example.algorithm.kamaCoder;
+package com.example.algorithm2025.leetCode.other;
 
-public class HashMapDemo {
+import com.example.algorithm.kamaCoder.HashMapDemo;
+
+public class HashMap {
     public static void main(String[] args) {
-        HashMapDemo hashMapDemo = new HashMapDemo();
+        HashMap hashMapDemo = new HashMap();
         hashMapDemo.put(1, 1);
         hashMapDemo.put(2, 2);
         System.out.println(hashMapDemo.get(1));
@@ -13,7 +15,7 @@ public class HashMapDemo {
     static class Node {
         int key, value;
         Node next;
-        public Node (int key, int value) {
+        public Node(int key, int value) {
             this.key = key;
             this.value = value;
             this.next = null;
@@ -26,12 +28,12 @@ public class HashMapDemo {
 
     public void put(int key, int value) {
         int idx = getIndex(key);
-        Node now = nodes[idx],  temp= now;
+        Node now = nodes[idx], temp = now;
         if (temp != null) {
             Node prev = null;
             while (temp != null) {
                 if (temp.key == key) {
-                    temp.value = value;
+                    now.value = value;
                     return;
                 }
                 prev = temp;//prev值不会因为下面temp值改变而改变 temp后赋值的prev不变 简单小demo实现一下验证
@@ -77,7 +79,7 @@ public class HashMapDemo {
                 if (now.key == key) {
                     if (prev != null) {
                         prev.next = now.next;
-                    }else {
+                    } else {
                         nodes[idx] = now.next;
                     }
                     now.next = null;
@@ -89,7 +91,7 @@ public class HashMapDemo {
         }
     }
 
-    private int getIndex(int key) {
+    private int getIndex(int key){
         int hash = Integer.hashCode(key);
         hash ^= (hash >>> 16);
         return hash % CAPACITY;
