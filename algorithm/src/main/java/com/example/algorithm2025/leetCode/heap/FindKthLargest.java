@@ -16,7 +16,7 @@ public class FindKthLargest {
     public void HeapAdjust(int[] arr, int start, int end) {
         int temp = arr[start];
         for(int i = 2 * start + 1; i <= end; i = i * 2 + 1) {
-            if(i < end && arr[i] < arr[i+1]) {
+            if(i < end && arr[i] < arr[i + 1]) {
                 i++;
             }
             if(arr[i] > temp) {
