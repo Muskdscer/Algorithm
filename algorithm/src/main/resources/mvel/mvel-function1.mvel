@@ -1,0 +1,19 @@
+
+
+function chgpaymode205(payIntv) {
+    result = payIntv;
+    if(payIntv == '0') {
+        result = '12'
+    } else if (payIntv == '1') {
+        result = '1.08'
+    } else if (payIntv == '3') {
+        result = '3.24'
+    } else if (payIntv == '6') {
+        result = '6.24'
+    } else if (payIntv == '12') {
+        result = '12'
+    }
+
+    System.out.println('payIntv result:' + result);
+    return result;
+}
