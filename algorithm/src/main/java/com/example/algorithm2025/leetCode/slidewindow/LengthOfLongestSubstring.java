@@ -5,8 +5,9 @@ import java.util.HashSet;
 
 public class LengthOfLongestSubstring {
     public static void main(String[] args) {
-        String str = "abcabcbb";
+        String str = "ababecbae";
         int result = lengthOfLongestSubstring(str);
+        System.out.println("最大长度： " + result);
     }
 
     private static int lengthOfLongestSubstring(String str) {
