@@ -4,10 +4,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 最小覆盖子串
+ * 最小覆盖子串  困难题 todo
  */
 public class MinWindow {
-    public String minWindow(String s, String t) {
+    public static void main(String[] args) {
+        String s = "ADOBECODEBANC", t = "ABC";
+        String result = minWindow(s, t);
+        System.out.println("最小覆盖子串为：" + result);
+    }
+    public static String minWindow(String s, String t) {
         if (s == null || s.isEmpty() || t == null || t.isEmpty() || s.length() < t.length()) {
             return "";
         }
