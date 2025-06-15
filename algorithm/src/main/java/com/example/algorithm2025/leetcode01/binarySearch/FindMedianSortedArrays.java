@@ -1,4 +1,4 @@
-package com.example.algorithm2025.leetCode.binarySearch;
+package com.example.algorithm2025.leetcode01.binarySearch;
 
 public class FindMedianSortedArrays {
     //todo
