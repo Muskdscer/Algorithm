@@ -39,12 +39,12 @@ public class GetIntersection {
         ListNode curA = headA;
         ListNode curB = headB;
         while(curA != null) {
-            lenA++;
             curA = curA.next;
+            lenA++;
         }
         while (curB != null) {
-            lenB++;
             curB = curB.next;
+            lenB++;
         }
         curA = headA;
         curB = headB;
@@ -63,7 +63,7 @@ public class GetIntersection {
         }
 
         while (curA != null) {
-            if (curA.val == curB.val) {
+            if (curA == curB) {
                 return curA;
             }
             curA = curA.next;
