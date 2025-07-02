@@ -3,7 +3,7 @@ package com.example.algorithm2025.leetcode01.graph;
 /**
  * 深搜版
  */
-public class NumIslands {
+public class NumIslandsDfs {
     public int numIslands(char[][] grid) {
         boolean[][] visited = new boolean[grid.length][grid[0].length];
         int ans = 0;
