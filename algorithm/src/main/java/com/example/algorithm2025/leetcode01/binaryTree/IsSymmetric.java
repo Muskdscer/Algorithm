@@ -1,14 +1,11 @@
 package com.example.algorithm2025.leetcode01.binaryTree;
 
 public class IsSymmetric {
-    public boolean isSymmetric (TreeNode root) {
+    public boolean isSymmetric(TreeNode root) {
         if (root == null) {
             return true;
         }
-        TreeNode left = root.left;
-        TreeNode right = root.right;
-        boolean flag = symmetric(left,right);
-        return flag;
+        return symmetric(root.left, root.right);
     }
 
     private boolean symmetric(TreeNode left, TreeNode right) {
@@ -24,10 +21,8 @@ public class IsSymmetric {
         if (left.val != right.val) {
             return false;
         }
-        //外侧
-        boolean outside = symmetric(left.left, right.right);
-        //内侧
-        boolean inside = symmetric(left.right, right.left);
-        return outside && inside;
+        boolean out = symmetric(left.left, right.right);
+        boolean in = symmetric(left.right, right.left);
+        return out && in;
     }
 }
