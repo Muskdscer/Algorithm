@@ -1,5 +1,6 @@
 package com.example.algorithm2025.leetcode01.binaryTree;
 
+//二叉树直径
 public class DiameterOfBinaryTree {
     private int diameter = 0;
     public int diameterOfBinaryTree(TreeNode root) {
