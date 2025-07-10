@@ -1,5 +1,8 @@
 package com.example.algorithm.designPattern.observer;
 
+/**
+ * 具体观察者
+ */
 public class HexaObserver extends Observer {
     public HexaObserver(Subject subject){
         this.subject = subject;

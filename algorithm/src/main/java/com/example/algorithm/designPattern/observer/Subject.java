@@ -3,6 +3,9 @@ package com.example.algorithm.designPattern.observer;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 被观察者
+ */
 public class Subject {
     private List<Observer> observers
             = new ArrayList<Observer>();

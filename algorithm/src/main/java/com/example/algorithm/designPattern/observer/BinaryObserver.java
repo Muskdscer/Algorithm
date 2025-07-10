@@ -1,5 +1,8 @@
 package com.example.algorithm.designPattern.observer;
 
+/**
+ * 具体观察者
+ */
 public class BinaryObserver extends Observer {
     public BinaryObserver(Subject subject){
         this.subject = subject;
