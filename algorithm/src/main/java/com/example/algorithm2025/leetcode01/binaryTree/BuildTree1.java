@@ -3,7 +3,7 @@ package com.example.algorithm2025.leetcode01.binaryTree;
 import java.util.HashMap;
 import java.util.Map;
 
-public class BuildTree {
+public class BuildTree1 {
     Map<Integer,Integer> map = new HashMap<Integer,Integer>();
     public TreeNode buildTree(int[] preorder, int[] inorder) {
         for (int i = 0; i < inorder.length; i++) {
