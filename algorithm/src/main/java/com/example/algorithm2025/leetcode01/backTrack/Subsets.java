@@ -1,4 +1,4 @@
-package com.example.algorithm2025.leetCode.backTrack;
+package com.example.algorithm2025.leetcode01.backTrack;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -17,9 +17,10 @@ public class Subsets {
         if (startIndex >= nums.length) {
             return;
         }
+
         for (int i = startIndex; i < nums.length; i++) {
             path.add(nums[i]);
-            subsetsHelper(nums, i + 1);
+            subsetsHelper(nums, startIndex+1);
             path.removeLast();
         }
     }
