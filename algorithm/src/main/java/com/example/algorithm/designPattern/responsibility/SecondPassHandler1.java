@@ -4,6 +4,7 @@ public class SecondPassHandler1 {
 
     /**
      * 第二关的下一关是 第三关
+     * 具体处理者（Concrete Handler）：实现处理方法，判断是否能处理当前请求，如果不能则将请求转发给后继者。
      */
     private ThirdPassHandler1 thirdPassHandler1;
 

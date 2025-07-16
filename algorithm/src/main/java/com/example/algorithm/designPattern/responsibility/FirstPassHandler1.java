@@ -3,6 +3,7 @@ package com.example.algorithm.designPattern.responsibility;
 public class FirstPassHandler1 {
     /**
      * 第一关的下一关是 第二关
+     * 具体处理者（Concrete Handler）：实现处理方法，判断是否能处理当前请求，如果不能则将请求转发给后继者。
      */
     private SecondPassHandler1 secondPassHandler1;
 

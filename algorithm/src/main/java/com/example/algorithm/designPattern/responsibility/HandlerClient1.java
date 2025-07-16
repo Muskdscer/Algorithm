@@ -1,5 +1,8 @@
 package com.example.algorithm.designPattern.responsibility;
 
+/**
+ * 客户端（Client）：创建处理链，并向链头的具体处理者对象提交请求
+ */
 public class HandlerClient1 {
     public static void main(String[] args) {
 
