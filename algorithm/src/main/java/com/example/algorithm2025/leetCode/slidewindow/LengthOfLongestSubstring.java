@@ -17,6 +17,7 @@ public class LengthOfLongestSubstring {
         int res = 0;
         for (int left = 0, right = 0; right < str.length(); right++) {
             char ch = chars[right];
+            //set只要还包含ch就一直while循环set从左边删除set里面元素  left++
             while (set.contains(ch)) {
                 set.remove(chars[left]);
                 left++;
