@@ -1,6 +1,10 @@
 package com.example.algorithm2025.leetCode.subarray;
 
 
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+
 public class MaxSlidingWindow {
     public static void main(String[] args) {
         int[] nums = new int[]{1, 3, -1, -3, 5, 3, 6, 7};
@@ -8,6 +12,9 @@ public class MaxSlidingWindow {
         for (int i : result) {
             System.out.println("滑动窗口最大值为： " + i);
         }
+//        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(10, 20, 300l, TimeUnit.SECONDS, new ArrayBlockingQueue<>(300));
+//        System.out.println("活跃线程数： " + threadPoolExecutor.getActiveCount() + "队列大小： " + threadPoolExecutor.getQueue().size());
+
     }
     public static int[] maxSlidingWindow(int[] nums, int k) {
         if (nums.length == 1) {
