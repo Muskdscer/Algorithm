@@ -1,4 +1,4 @@
-package com.example.algorithm.sort1;
+package com.example.algorithm2025.leetcode01.sort;
 
 public class MergeSort {
     public static void main(String[] args) {
