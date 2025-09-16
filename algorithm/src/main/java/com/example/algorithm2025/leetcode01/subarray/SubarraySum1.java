@@ -11,6 +11,8 @@ public class SubarraySum1 {
         map.put(0, 1);
         for (int i = 0; i < nums.length; i++) {
             pre += nums[i];
+            //pre - k = count
+            //pre - count = k
             if (map.containsKey(pre - k)) {
                 count += map.get(pre - k);
             }
