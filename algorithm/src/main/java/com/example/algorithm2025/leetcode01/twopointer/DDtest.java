@@ -30,6 +30,6 @@ public class DDtest {
                 }
             }
         }
-        return
+        return res.get(absSum);
     }
 }
