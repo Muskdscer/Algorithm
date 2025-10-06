@@ -13,6 +13,8 @@ public class Test {
         for (List<Integer> re : res) {
             System.out.println(re.toArray());
         }
+        //ThreadLocal
+        ThreadLocal<String> local = new ThreadLocal<>();
     }
 
     private void backTracking(int[] arr, int m, int n, int sum, int index) {
