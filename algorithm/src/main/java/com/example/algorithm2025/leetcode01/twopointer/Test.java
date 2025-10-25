@@ -2,6 +2,8 @@ package com.example.algorithm2025.leetcode01.twopointer;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 
 public class Test {
@@ -15,6 +17,8 @@ public class Test {
         }
         //ThreadLocal
         ThreadLocal<String> local = new ThreadLocal<>();
+        //Lock
+        Lock lock = new ReentrantLock();
     }
 
     private void backTracking(int[] arr, int m, int n, int sum, int index) {
@@ -33,5 +37,9 @@ public class Test {
             sum -= arr[i];
             path.remove(path.size() - 1);
         }
+    }
+
+    public static void main(String[] args) {
+
     }
 }
