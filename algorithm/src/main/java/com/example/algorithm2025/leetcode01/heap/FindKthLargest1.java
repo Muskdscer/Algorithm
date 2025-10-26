@@ -1,19 +1,16 @@
 package com.example.algorithm2025.leetcode01.heap;
 
-public class FindKthLargest {
+public class FindKthLargest1 {
     public int findKthLargest(int[] nums, int k) {
-        //第一个非叶子节点调整
         for (int i = nums.length / 2 - 1; i >= 0; i--) {
             HeapAdjust(nums, i, nums.length - 1);
         }
-        //先调换 再调整
         for (int i = nums.length - 1; i > nums.length - k; i--) {
             swap(nums, 0, i);
             HeapAdjust(nums, 0, i - 1);
         }
         return nums[0];
     }
-
     public void HeapAdjust(int[] arr, int start, int end) {
         int temp = arr[start];
         for(int i = 2 * start + 1; i <= end; i = i * 2 + 1) {
