@@ -21,6 +21,7 @@ public class Subsets1 {
 
         for (int i = startIndex; i < nums.length; i++) {
             path.add(nums[i]);
+            //这地方是i + 1  不是startIndex + 1，从i的下一个位置开始，startIndex用来外层遍历
             subsetsHelper(nums, i + 1);
             path.removeLast();
         }
