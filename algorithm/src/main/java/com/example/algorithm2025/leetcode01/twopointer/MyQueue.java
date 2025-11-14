@@ -28,7 +28,7 @@ public class MyQueue {
             System.out.println("队列满");
             return;
         }
-        rear++;
+        rear = (rear + 1) % maxSize;
         arr[rear] = val;
     }
     //出队列
@@ -36,7 +36,7 @@ public class MyQueue {
         if (isEmpty()) {
             throw new RuntimeException("队列空");
         }
-        front++;
+        front = (front + 1) % maxSize;
         return arr[front];
     }
     public void showQueue() {
