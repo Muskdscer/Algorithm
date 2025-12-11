@@ -4,6 +4,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
+//广搜思路：到一个没有遍历过的节点陆地，计数器就加一，然后把该节点陆地所能遍历到的陆地都标记上。
+//再遇到标记过的陆地节点和海洋节点的时候直接跳过
 public class NoIslandBfs1 {
     static class pair {
         int first;

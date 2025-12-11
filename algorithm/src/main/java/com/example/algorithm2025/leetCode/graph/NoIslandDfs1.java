@@ -2,6 +2,7 @@ package com.example.algorithm2025.leetCode.graph;
 
 import java.util.Scanner;
 
+//深搜思路：是用遇到一个没有遍历过的节点陆地，计数器就加一，然后把该节点陆地所能遍历到的陆地都标记上
 public class NoIslandDfs1 {
     public static int[][] dir = {{0, 1}, {1, 0}, {-1, 0}, {0, -1}};
 
