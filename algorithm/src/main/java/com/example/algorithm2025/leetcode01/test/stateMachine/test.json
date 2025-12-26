@@ -1,0 +1,6 @@
+[
+  {"from":"WAIT_PAY", "event":"PAY", "to":"PAID"},
+  {"from":"PAID", "event":"SHIP", "to":"SHIPPED"},
+  {"from":"SHIPPED", "event":"CONFIRM", "to":"FINISHED"},
+  {"from":"WAIT_PAY", "event":"CANCEL", "to":"CANCELED"}
+]
